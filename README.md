@@ -1,10 +1,10 @@
 # Privacy Policy — NOC Toolkit
 
-**Last updated:** August 28, 2026
+**Last updated:** August 30, 2026
 
 ## Overview
 
-NOC Toolkit ("the extension") is a browser tool for IT and network diagnostics: IP lookup, DNS resolution, and subnet calculation. This policy explains what data the extension does and does not collect.
+NOC Toolkit ("the extension") is a browser tool for IT and network diagnostics: IP lookup, DNS resolution, MAC vendor lookup, and subnet calculation. This policy explains what data the extension does and does not collect.
 
 ## What the extension does NOT do
 
@@ -21,6 +21,7 @@ When you use a feature, the extension sends a request directly from your browser
 |---|---|---|
 | IP Lookup | The IP address you typed, or a request for your own public IP | [ipwho.is](https://ipwho.is) |
 | DNS Lookup | The domain name you typed | [Google Public DNS](https://developers.google.com/speed/public-dns/docs/doh) (`dns.google`) |
+| MAC Vendor Lookup | The MAC address you typed | [macvendors.com](https://macvendors.com) |
 | Subnet Calculator | Nothing — this runs entirely on your device with no network request | — |
 
 These requests go directly from your browser to the third-party service named above; NOC Toolkit itself never sees or stores this data. Each service's own privacy policy governs how they handle that request (typically standard server logs, e.g. IP address and timestamp, consistent with normal web server operation).
@@ -28,7 +29,7 @@ These requests go directly from your browser to the third-party service named ab
 ## Local storage
 
 The extension uses your browser's local storage (via the `chrome.storage` API) to remember two small preferences on your own device only:
-- which tab (IP / DNS / Subnet) you last had open
+- which tab (IP / DNS / Subnet / MAC) you last had open
 - which DNS record type you last selected
 
 This data never leaves your device and is not accessible to us or to any third party.
@@ -37,7 +38,7 @@ This data never leaves your device and is not accessible to us or to any third p
 
 The extension requests:
 - `storage` — to remember the preferences described above
-- Host access to `ipwho.is` and `dns.google` — the two lookup services described above
+- Host access to `ipwho.is`, `dns.google`, and `api.macvendors.com` — the three lookup services described above
 
 No other permissions are requested. The extension cannot read, modify, or access any other website you visit.
 
